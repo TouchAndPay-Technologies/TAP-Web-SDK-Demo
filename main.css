@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 64.2%;
+}
+
+:root {
+  --blue-primary: rgb(60, 116, 214);
+  --input-background: rgba(184, 178, 178, 0.589);
+  --error-alert: rgb(227, 55, 55);
+  --white: #fff;
+}
+
+*::selection {
+  background-color: var(--blue-primary);
+  color: var(--white);
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 40rem;
+}
+
+.form-group {
+  margin: 2rem 0;
+}
+
+.form-group input,
+.form-group label {
+  display: block;
+  font-size: 1.8rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.8rem 0;
+  background-color: var(--input-background);
+  border: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem 0;
+  border: none;
+  font-size: 1.8rem;
+}
+
+.error-field {
+  color: var(--error-alert);
+  font-size: 1.5rem;
+  margin: 0.8rem 0;
+}
+
+.btn-primary {
+  background-color: rgb(60, 116, 214);
+  color: #fff;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
