@@ -2,8 +2,8 @@
 const form = document.querySelector("form")
 const error = document.querySelector(".error-field");
 const alertHolder = document.querySelector("#alert-holder")
-// const api_key = "TkdLb2VUMk46ZXRoWEdJSEF0Z24xOnB1WVUzd3dvS1c4bw==";
-const api_key = "TkdLb2VUMk46ZXRoWEdJSEF0Z24xOnB1WVUzd3dvS1c4bw"
+const api_key = "TkdLb2VUMk46ZXRoWEdJSEF0Z24xOnB1WVUzd3dvS1c4bw==";
+// const api_key = "TkdLb2VUMk46ZXRoWEdJSEF0Z24xOnB1WVUzd3dvS1c4bw"
 
 
 

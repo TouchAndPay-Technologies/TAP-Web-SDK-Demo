@@ -4,6 +4,7 @@
   padding: 0;
   list-style: none;
   font-size: 64.2%;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -87,7 +88,7 @@ input[type='number'] {
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 35rem;
+  width: 37rem;
   padding: 15px 5px;
   background-color: var(--white);
 }
