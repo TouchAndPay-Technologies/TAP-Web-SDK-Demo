@@ -8,8 +8,9 @@
 
 :root {
   --blue-primary: rgb(60, 116, 214);
-  --input-background: rgba(184, 178, 178, 0.589);
+  --input-background: rgba(184, 178, 178, 0.403);
   --error-alert: rgb(227, 55, 55);
+  --box-shadow: rgba(0, 0, 0, 0.253);
   --white: #fff;
 }
 
@@ -23,6 +24,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--white);
 }
 
 form {
@@ -75,4 +77,33 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type='number'] {
   -moz-appearance: textfield;
+}
+
+#alert-holder {
+  position: absolute;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35rem;
+  padding: 15px 5px;
+  background-color: var(--white);
+}
+
+#alert-holder .alert {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    display: block;
+    padding: 2rem 1rem;
+  }
+
+  form {
+    margin: 5rem 0;
+    width: auto;
+  }
 }
