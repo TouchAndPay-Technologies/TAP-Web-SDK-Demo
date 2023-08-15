@@ -21,12 +21,16 @@ form.addEventListener("submit", function (event) {
   const fullname = this[0].value
   const amountinkobo = this[1].value;
   const email = this[2].value;
+  const billerID = this[4].value;
+  const productID = this[5].value;
 
   if (fullname == "" || amountinkobo == "" || email == "") {
     error.innerHTML = ("Fields can not be empty")
   } else {
     error.innerHTML = ""
-    payWithTAP(email, amountinkobo, fullname);
+    console.dir({ billerID })
+    console.dir({ productID })
+    payWithTAP(email, amountinkobo, fullname, productID, billerID);
   }
 })
 
@@ -44,7 +48,7 @@ function generateREF() {
   return result;
 }
 
-function payWithTAP(email, amountinkobo, fullname) {
+function payWithTAP(email, amountinkobo, fullname, productID, billerID) {
   const handler = TAPPaymentPop.setup({
     apiKey: api_key,
     amount: amountinkobo,
@@ -52,6 +56,8 @@ function payWithTAP(email, amountinkobo, fullname) {
     email: email,
     customPayload: {
       fullname: fullname,
+      productID,
+      billerID,
     },
     callback: function (response) {
       console.log(response);
