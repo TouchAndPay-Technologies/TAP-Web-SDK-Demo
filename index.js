@@ -11,6 +11,9 @@ const billerProduct = document.querySelector("#billerProduct");
 
 // https://raissuers-staging.touchandpay.me/v1/remita/biller-category
 
+// get categories on load
+
+
 form.addEventListener("submit", function (event) {
   event.preventDefault()
 
@@ -165,6 +168,7 @@ const categoryModal = (message, status) => {
 }
 
 const createBillerCategoriesSelect = (elementTag, options, type) => {
+  // Map over each option for element type and append
 
   if (type === "categories") {
     elementTag.innerHTML = ""
@@ -173,7 +177,6 @@ const createBillerCategoriesSelect = (elementTag, options, type) => {
     optionSelect.setAttribute("value", -1);
     optionSelect.innerHTML = "select category";
     elementTag.append(optionSelect)
-
 
     options.forEach(option => {
       const optionSelect = document.createElement("option");
@@ -222,9 +225,8 @@ const createBillerCategoriesSelect = (elementTag, options, type) => {
 
 }
 
-getCategories()
 
-
+//Handlers for select
 const handleCategoriesSelect = (event) => {
   const categoryId = Number((event.target.value))
   if (categoryId !== -1) {
@@ -243,3 +245,4 @@ const handleBillerSelect = (event) => {
 
 billerCategory.addEventListener('change', handleCategoriesSelect)
 billerCategories.addEventListener("change", handleBillerSelect)
+getCategories()
